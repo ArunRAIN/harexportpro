@@ -49,7 +49,7 @@ public class ReadFile {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
-		 File folder1 = new File("./HARtool");
+		 File folder1 = new File("D:/software/HARtool");
 	    	File fList[] = folder1.listFiles();
 	    	for (int i = 0; i < fList.length; i++) {
 	    	    File pes = fList[i];
@@ -59,7 +59,7 @@ public class ReadFile {
 	    	    }
 	    	}
 		
-	    	 File folder12 = new File("./HARtool");
+	    	 File folder12 = new File("D:/software/HARtool");
 		    	File fList2[] = folder12.listFiles();
 		    	for (int i = 0; i < fList2.length; i++) {
 		    	    File pes = fList2[i];
@@ -74,8 +74,8 @@ public class ReadFile {
 	    	
 		FirefoxProfile profile = new FirefoxProfile();
 
-        File firebug = new File("./xpifile/firebug-2.0.19.xpi");
-        File netExport = new File("./xpifile/netExport-0.9b7.xpi");
+        File firebug = new File("C:\\Selenium\\firebug-2.0.19.xpi");
+        File netExport = new File("C:\\Selenium\\netExport-0.9b7.xpi");
 
         try
         {
@@ -132,7 +132,7 @@ public class ReadFile {
        
         
 		
-		System.out.println("Har file downloaded in diectory....");
+		System.out.println("Please provide the folder path having only files");
 		
 		//Scanner scan = new Scanner(System.in);
 		//String s = scan.next();
@@ -140,7 +140,7 @@ public class ReadFile {
 		
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 		
-		String folder = "./HARtool";
+		String folder = "D:/software/HARtool";
 //		File dir = FileUtils.getFile(folder);
 //		FileUtils.deleteDirectory(dir);
 //		new File(folder).mkdir();
@@ -176,9 +176,6 @@ public class ReadFile {
 				csvfiles.add(files.get(i));
 			}
 		}
-		
-		System.out.println("Sucessfully Har file converted to CSV");
-		
         Thread.sleep(2000);
          //System.out.println("D:/software/HARtool/"+harFileName.substring(0, harFileName.indexOf(".")) +".csv");
         int v = ReadFile.getRowCount("D:/software/HARtool/"+harFileName.substring(0, harFileName.indexOf(".")) +".csv");
@@ -188,7 +185,7 @@ public class ReadFile {
 		{
 		String t = ReadFile.getValue("D:/software/HARtool/"+harFileName.substring(0, harFileName.indexOf(".")) +".csv", i, 1);
 		String[] p=t.split("\t");
-		System.out.println(p[4]+" ="+ p[0]);
+		//System.out.println(t);
 		try{
 		//System.out.println(p[4]);
 		
@@ -231,7 +228,7 @@ public class ReadFile {
 		
 		}
 		catch(Exception e){
-			e.printStackTrace();
+			//System.out.println(p[4]+" ="+ p[0]);
 		}
 		
 		
